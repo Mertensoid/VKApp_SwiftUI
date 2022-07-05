@@ -9,6 +9,8 @@ import SwiftUI
 
 struct UserCell: View {
     
+    
+    
     var userName: String = ""
     var userPicName: String = ""
     

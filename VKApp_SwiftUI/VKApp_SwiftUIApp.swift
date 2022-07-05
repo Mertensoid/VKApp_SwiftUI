@@ -8,7 +8,10 @@
 import SwiftUI
 
 @main
+
+
 struct VKApp_SwiftUIApp: App {
+
     var body: some Scene {
         WindowGroup {
             ContainerView()

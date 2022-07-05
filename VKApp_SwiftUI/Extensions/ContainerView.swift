@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ContainerView: View {
+    
     @State private var shouldShowMainView = false
     
     var body: some View {
         NavigationView {
             HStack {
-                LoginView(isUserLoggedIn: $shouldShowMainView)
+                VKLoginWebView()
+                //LoginView(isUserLoggedIn: $shouldShowMainView)
                 NavigationLink(destination: MainView(), isActive: $shouldShowMainView) {
                     EmptyView()
                 }

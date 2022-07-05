@@ -11,7 +11,7 @@ struct MainView: View {
     
     var body: some View {
         TabView {
-            FriendsView()
+            FriendsView(viewModel: FriendsViewModel())
                 .tabItem {
                     Image(systemName: "person.3")
                     Text("Friends")

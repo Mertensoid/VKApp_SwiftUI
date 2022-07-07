@@ -8,17 +8,6 @@
 import SwiftUI
 
 struct FriendsView: View {
-//    @State private var friends: [Friend] = [
-//        Friend(name: "Иванов Иван Иванович", imageName: "essentials-1"),
-//        Friend(name: "Сидоров Степан Иннокентьевич", imageName: "essentials-2"),
-//        Friend(name: "Прохоров Александр Геннадьевич", imageName: "essentials-3"),
-//        Friend(name: "Мацук Максим Александрович", imageName: "essentials-4"),
-//        Friend(name: "Степанов Сергей Иванович", imageName: "essentials-5"),
-//        Friend(name: "Грач Анатолий Романович", imageName: "essentials-6"),
-//        Friend(name: "Мацук Максим Александрович", imageName: "essentials-4"),
-//        Friend(name: "Степанов Сергей Иванович", imageName: "essentials-5"),
-//        Friend(name: "Грач Анатолий Романович", imageName: "essentials-6")
-//    ]
     
     @ObservedObject var viewModel: FriendsViewModel
     
@@ -28,11 +17,12 @@ struct FriendsView: View {
     
     var body: some View {
         List(viewModel.friends) { friend in
-            Section(header: FriendsHeaderView()) {
-                NavigationLink(destination: FriendPhotoView()) {
-                    UserCell(userName: friend.name, userPicName: friend.friendPhoto)
-                }
+            NavigationLink(destination: FriendPhotoView()) {
+                UserCell(userName: friend.name, userPicName: friend.friendPhoto)
             }
+//            Section(header: FriendsHeaderView()) {
+//
+//            }
         }
         .onAppear(perform: viewModel.fetchFriends)
         .listStyle(.plain)

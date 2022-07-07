@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CircleShadow: ViewModifier {
     let shadowColor: Color
@@ -20,13 +21,13 @@ struct CircleShadow: ViewModifier {
 
 extension View {
     func circleShadow(color: Color, radius: CGFloat) -> some View {
-        return self.modifier(CircleShadow(shadowColor: .blue, shadowRadius: 5))
+        return self.modifier(CircleShadow(shadowColor: .green, shadowRadius: 5))
     }
 }
     
 struct CellImage: View {
-    var content: Image
-    init(@ViewBuilder content: () -> Image) {
+    var content: KFImage
+    init(@ViewBuilder content: () -> KFImage) {
         self.content = content()
     }
     var body: some View {

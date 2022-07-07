@@ -12,9 +12,9 @@ struct GroupCell: View {
         VStack {
             ZStack {
                 HStack {
-                    CellImage {
-                        Image("essentials-2")
-                    }
+//                    CellImage {
+//                        Image("essentials-2")
+//                    }
                     VStack {
                         HStack{
                             Text("Название группы")

@@ -6,18 +6,26 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct UserCell: View {
+    
+    
+    
+    var userName: String = ""
+    var userPicName: String = ""
+    
     var body: some View {
         VStack {
             ZStack {
                 HStack {
                     CellImage {
-                        Image("farmer_icon_128x128")
+                        KFImage(URL(string: userPicName))
                     }
+                    .opacity(1)
                     VStack {
                         HStack{
-                            Text("Фамилия Имя Отчество")
+                            Text(userName)
                                 .padding(.all, 5)
                             Spacer()
                         }
@@ -26,19 +34,20 @@ struct UserCell: View {
                             HStack{
                                 Text("Дата рождения")
                                     .padding(.all, 5)
-                                    .foregroundColor(Color(red: 0.5, green: 0.5, blue: 0.5, opacity: 0.8))
+                                    .foregroundColor(Color(red: 0.5, green: 0.5, blue: 0.5, opacity: 1))
                                 Spacer()
                             }
                         }
                     }
                 }
+                
             }
-            .frame(height: 74, alignment: .top)
-            .padding(.all, 5)
-            .background(Color(red: 0.1, green: 0.5, blue: 1, opacity: 0.1))
-            .cornerRadius(10)
+            
         }
+        .frame(height: 74, alignment: .top)
         .padding(.all, 5)
+        .background(Color(red: 0.1, green: 0.5, blue: 1, opacity: 0.1))
+        .cornerRadius(10)
     }
         
 }

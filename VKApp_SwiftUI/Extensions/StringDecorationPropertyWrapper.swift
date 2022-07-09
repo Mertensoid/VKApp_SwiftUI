@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import UIKit
-
 
 enum StringDecorator {
     case camelCase
@@ -15,21 +13,69 @@ enum StringDecorator {
     case kebabCase
 }
 
+class StringDecoratorClass {
+
+    var decorateMethod: StringDecorator = .camelCase
+    
+    func toCamelCase(startString: String) -> String {
+        var resultString = ""
+        var isAfterSpace = false
+        for char in startString {
+            if isAfterSpace && char != " " {
+                resultString.append(contentsOf: char.uppercased())
+                isAfterSpace = false
+            } else if !isAfterSpace && char != " " {
+                resultString.append(contentsOf: char.lowercased())
+            } else {
+                isAfterSpace = true
+            }
+        }
+        return resultString
+    }
+
+    func toSnakeCase(startString: String) -> String {
+        var resultString = ""
+        for char in startString {
+            if char != " " {
+                resultString.append(contentsOf: char.lowercased())
+            } else {
+                resultString.append(contentsOf: "_")
+            }
+        }
+        return resultString
+    }
+
+    func toKebabCase(startString: String) -> String {
+        var resultString = ""
+        for char in startString {
+            if char != " " {
+                resultString.append(contentsOf: char.lowercased())
+            } else {
+                resultString.append(contentsOf: "-")
+            }
+        }
+        return resultString
+    }
+}
+
 class MyClass {
-    @Decorated(decorateString: .camelCase) var myProperty = ""
+    @Decorated(decorateString: .camelCase) var camelProperty = ""
+    @Decorated(decorateString: .snakeCase) var snakeProperty = ""
+    @Decorated(decorateString: .kebabCase) var kebabProperty = ""
 }
 
 @propertyWrapper
-struct Decorated<String> {
+struct Decorated {
     
     private var value: String
     private let stringDecorator: StringDecorator
-    
-    
+    private let stringDecoratorClass: StringDecoratorClass
     
     init(wrappedValue: String, decorateString: StringDecorator) {
         self.value = wrappedValue
         self.stringDecorator = decorateString
+        self.stringDecoratorClass = StringDecoratorClass()
+        stringDecoratorClass.decorateMethod = decorateString
     }
     
     private func get() -> String {
@@ -37,20 +83,15 @@ struct Decorated<String> {
     }
     
     private mutating func set(_ newValue: String) {
-        
-        var decoratedString = newValue
-        
+
         switch stringDecorator {
-//        case .camelCase:
-//            for index in newValue.indices {
-//                <#code#>
-//            }
-//        case .snakeCase:
-//            <#code#>
-//        case .kebabCase:
-//            <#code#>
-//        }
-        value = newValue
+        case .camelCase:
+            value = stringDecoratorClass.toCamelCase(startString: newValue)
+        case .snakeCase:
+            value = stringDecoratorClass.toSnakeCase(startString: newValue)
+        case .kebabCase:
+            value = stringDecoratorClass.toKebabCase(startString: newValue)
+        }
     }
     
     public var wrappedValue: String {
@@ -63,6 +104,4 @@ struct Decorated<String> {
     }
 }
 
-let myClass = MyClass()
-let property = myClass.myProperty
-myClass.myProperty = "1"
+

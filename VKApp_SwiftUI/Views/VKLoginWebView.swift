@@ -53,7 +53,14 @@ class WebViewNavigationDelegate: NSObject, WKNavigationDelegate {
             decisionHandler(.allow)
             return
         }
-        print(fragment)
+        
+        let myClass = MyClass()
+        myClass.camelProperty = "Hello World"
+        myClass.snakeProperty = "Hello World"
+        myClass.kebabProperty = "Hello World"
+        print(myClass.camelProperty)
+        print(myClass.snakeProperty)
+        print(myClass.kebabProperty)
         
         let params = fragment
             .components(separatedBy: "&")

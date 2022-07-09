@@ -15,7 +15,9 @@ struct VKApp_SwiftUIApp: App {
     fileprivate static let tokenSavedPublisher = NotificationCenter.default.publisher(for: Notification.Name("vkTokenSaved"))
     
     var body: some Scene {
+        
         WindowGroup {
+            
             if isAuthorized {
                 MainView()
             } else {

@@ -10,8 +10,6 @@ import Kingfisher
 
 struct UserCell: View {
     
-    
-    
     var userName: String = ""
     var userPicName: String = ""
     
@@ -22,7 +20,6 @@ struct UserCell: View {
                     CellImage {
                         KFImage(URL(string: userPicName))
                     }
-                    .opacity(1)
                     VStack {
                         HStack{
                             Text(userName)
@@ -40,16 +37,9 @@ struct UserCell: View {
                         }
                     }
                 }
-                
             }
-            
         }
-        .frame(height: 74, alignment: .top)
-        .padding(.all, 5)
-        .background(Color(red: 0.1, green: 0.5, blue: 1, opacity: 0.1))
-        .cornerRadius(10)
     }
-        
 }
 
 struct UserCell_Previews: PreviewProvider {

@@ -12,6 +12,9 @@ class FriendsViewModel: ObservableObject {
     let networkService: NetworkService = NetworkService()
     
     @Published var friends: [FriendData] = []
+//    let testFriends: [FriendData] = [
+//        FriendData(friendID: 123, name: "123", surName: "123", friendPhoto: "123")
+//    ]
     
 //    init(friendService: FriendService) {
 //        self.friendService = friendService

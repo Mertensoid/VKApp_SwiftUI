@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84DAECA62883F1B100A26385 /* BounceAnimationEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAECA52883F1B100A26385 /* BounceAnimationEffect.swift */; };
+		84DAECA9288403C000A26385 /* LikesCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAECA8288403C000A26385 /* LikesCounter.swift */; };
 		84DC218028608CDD00A3F4EB /* VKApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC217F28608CDD00A3F4EB /* VKApp_SwiftUIApp.swift */; };
 		84DC218228608CDD00A3F4EB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC218128608CDD00A3F4EB /* LoginView.swift */; };
 		84DC218428608CDE00A3F4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DC218328608CDE00A3F4EB /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84DAECA52883F1B100A26385 /* BounceAnimationEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceAnimationEffect.swift; sourceTree = "<group>"; };
+		84DAECA8288403C000A26385 /* LikesCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesCounter.swift; sourceTree = "<group>"; };
 		84DC217C28608CDD00A3F4EB /* VKApp_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApp_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DC217F28608CDD00A3F4EB /* VKApp_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKApp_SwiftUIApp.swift; sourceTree = "<group>"; };
 		84DC218128608CDD00A3F4EB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -90,6 +94,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84DAECA42883F18400A26385 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				84DAECA52883F1B100A26385 /* BounceAnimationEffect.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		84DAECA7288403A600A26385 /* myViews */ = {
+			isa = PBXGroup;
+			children = (
+				84DAECA8288403C000A26385 /* LikesCounter.swift */,
+			);
+			path = myViews;
+			sourceTree = "<group>";
+		};
 		84DC217328608CDD00A3F4EB = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +162,7 @@
 		84DC220C286B600500A3F4EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84DAECA7288403A600A26385 /* myViews */,
 				84DC218128608CDD00A3F4EB /* LoginView.swift */,
 				84DC2211286E261E00A3F4EB /* MainView.swift */,
 				84DC2214286E268000A3F4EB /* FriendPhotoView.swift */,
@@ -157,6 +178,7 @@
 		84DC220D286B725B00A3F4EB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				84DAECA42883F18400A26385 /* Animations */,
 				84DC220F286B728A00A3F4EB /* CellPictureViewBuilder.swift */,
 				84DC2217286E26FF00A3F4EB /* ContainerView.swift */,
 				84DC22752877523700A3F4EB /* StringDecorationPropertyWrapper.swift */,
@@ -277,10 +299,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DAECA62883F1B100A26385 /* BounceAnimationEffect.swift in Sources */,
 				84DC221D286F3F6600A3F4EB /* FriendsView.swift in Sources */,
 				84DC218228608CDD00A3F4EB /* LoginView.swift in Sources */,
 				84DC22562874721000A3F4EB /* FriendResponse.swift in Sources */,
 				84DC22532874721000A3F4EB /* GroupResponse.swift in Sources */,
+				84DAECA9288403C000A26385 /* LikesCounter.swift in Sources */,
 				84DC221F286F422400A3F4EB /* GroupsView.swift in Sources */,
 				84DC225A2874721000A3F4EB /* VKResponse.swift in Sources */,
 				84DC2212286E261E00A3F4EB /* MainView.swift in Sources */,

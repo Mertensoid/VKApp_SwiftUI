@@ -17,7 +17,7 @@ struct MainView: View {
                     Text("Friends")
                 }
                 .tag(0)
-            GroupsView()
+            GroupsView(viewModel: FriendsViewModel())
                 .tabItem {
                     Image(systemName: "ellipsis.bubble")
                     Text("Groups")

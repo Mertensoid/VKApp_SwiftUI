@@ -11,7 +11,10 @@ import SwiftUI
 
 
 struct VKApp_SwiftUIApp: App {
+    
     @State var isAuthorized = false
+    @StateObject var coordinator = MainCoordinator()
+    
     fileprivate static let tokenSavedPublisher = NotificationCenter.default.publisher(for: Notification.Name("vkTokenSaved"))
     
     var body: some Scene {
@@ -19,7 +22,7 @@ struct VKApp_SwiftUIApp: App {
         WindowGroup {
             
             if isAuthorized {
-                MainView()
+                MainView(coordinator: coordinator)
             } else {
                 VKLoginWebView().onReceive(VKApp_SwiftUIApp.tokenSavedPublisher) { _ in
                     self.isAuthorized.toggle()

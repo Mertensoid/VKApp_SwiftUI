@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		84DAECA62883F1B100A26385 /* BounceAnimationEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAECA52883F1B100A26385 /* BounceAnimationEffect.swift */; };
 		84DAECA9288403C000A26385 /* LikesCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAECA8288403C000A26385 /* LikesCounter.swift */; };
+		84DAECAE2892C70000A26385 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAECAD2892C70000A26385 /* MainCoordinator.swift */; };
 		84DC218028608CDD00A3F4EB /* VKApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC217F28608CDD00A3F4EB /* VKApp_SwiftUIApp.swift */; };
 		84DC218228608CDD00A3F4EB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC218128608CDD00A3F4EB /* LoginView.swift */; };
 		84DC218428608CDE00A3F4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DC218328608CDE00A3F4EB /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		84DAECA52883F1B100A26385 /* BounceAnimationEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceAnimationEffect.swift; sourceTree = "<group>"; };
 		84DAECA8288403C000A26385 /* LikesCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesCounter.swift; sourceTree = "<group>"; };
+		84DAECAD2892C70000A26385 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		84DC217C28608CDD00A3F4EB /* VKApp_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApp_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DC217F28608CDD00A3F4EB /* VKApp_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKApp_SwiftUIApp.swift; sourceTree = "<group>"; };
 		84DC218128608CDD00A3F4EB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,15 @@
 			path = myViews;
 			sourceTree = "<group>";
 		};
+		84DAECAC2892C6B100A26385 /* TabCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				84DC2211286E261E00A3F4EB /* MainView.swift */,
+				84DAECAD2892C70000A26385 /* MainCoordinator.swift */,
+			);
+			path = TabCoordinator;
+			sourceTree = "<group>";
+		};
 		84DC217328608CDD00A3F4EB = {
 			isa = PBXGroup;
 			children = (
@@ -129,13 +140,13 @@
 		84DC217E28608CDD00A3F4EB /* VKApp_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				84DC217F28608CDD00A3F4EB /* VKApp_SwiftUIApp.swift */,
 				84DC22452874715000A3F4EB /* JSON Mapping */,
 				84DC224028746E2400A3F4EB /* Services */,
 				84DC2219286E2EF200A3F4EB /* Models */,
 				84DC220D286B725B00A3F4EB /* Extensions */,
 				84DC220C286B600500A3F4EB /* Views */,
 				84DC2203286B5EFD00A3F4EB /* TableCells */,
-				84DC217F28608CDD00A3F4EB /* VKApp_SwiftUIApp.swift */,
 				84DC218328608CDE00A3F4EB /* Assets.xcassets */,
 				84DC218528608CDE00A3F4EB /* Preview Content */,
 			);
@@ -162,9 +173,9 @@
 		84DC220C286B600500A3F4EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84DAECAC2892C6B100A26385 /* TabCoordinator */,
 				84DAECA7288403A600A26385 /* myViews */,
 				84DC218128608CDD00A3F4EB /* LoginView.swift */,
-				84DC2211286E261E00A3F4EB /* MainView.swift */,
 				84DC2214286E268000A3F4EB /* FriendPhotoView.swift */,
 				84DC221C286F3F6600A3F4EB /* FriendsView.swift */,
 				84DC221E286F422400A3F4EB /* GroupsView.swift */,
@@ -315,6 +326,7 @@
 				84DC22522874721000A3F4EB /* PhotoData.swift in Sources */,
 				84DC2228286F43F400A3F4EB /* FriendPhoto.swift in Sources */,
 				84DC2210286B728A00A3F4EB /* CellPictureViewBuilder.swift in Sources */,
+				84DAECAE2892C70000A26385 /* MainCoordinator.swift in Sources */,
 				84DC2218286E26FF00A3F4EB /* ContainerView.swift in Sources */,
 				84DC225D2874A72100A3F4EB /* VKLoginWebView.swift in Sources */,
 				84DC2209286B5FD900A3F4EB /* UserCell.swift in Sources */,

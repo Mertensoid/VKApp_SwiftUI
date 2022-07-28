@@ -13,22 +13,20 @@ struct FriendsView: View {
     
     init(viewModel: FriendsViewModel) {
         self.viewModel = viewModel
+        self.viewModel.fetchFriends()
         
     }
     
     var body: some View {
-        NavigationView {
-            List(viewModel.friends) { friend in
-                NavigationLink(destination: FriendPhotoView()) {
-                    UserCell(userName: friend.name, userPicName: friend.friendPhoto)
-                }
+        List(viewModel.friends) { friend in
+            NavigationLink(destination: FriendPhotoView()) {
+                UserCell(userName: friend.name, userPicName: friend.friendPhoto)
             }
-            .listStyle(.plain)
-            .navigationBarTitleDisplayMode(.inline)
-            .padding(.all, 0)
-            .navigationTitle("Friends")
-            .onAppear(perform: viewModel.fetchFriends)
         }
+        .listStyle(.plain)
+        .navigationBarTitleDisplayMode(.inline)
+        .padding(.all, 0)
+        .navigationTitle("Friends")
     }
 }
 

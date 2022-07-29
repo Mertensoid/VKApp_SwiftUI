@@ -22,7 +22,7 @@ struct MainView: View {
             }
             .tag(MainTab.friends)
             NavigationView {
-                GroupsView(viewModel: FriendsViewModel())
+                GroupsView(viewModel: GroupsViewModel())
             }
             .tabItem {
                 Image(systemName: "ellipsis.bubble")

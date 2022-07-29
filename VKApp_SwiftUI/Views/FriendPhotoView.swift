@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FriendPhotoView: View {
+    
+    @ObservedObject var viewModel: FriendPhotoViewModel
+    
     private var friendsPhoto: [FriendPhoto] = [
         FriendPhoto(picture: "summer-1"),
         FriendPhoto(picture: "summer-2"),
@@ -31,31 +34,33 @@ struct FriendPhotoView: View {
         FriendPhoto(picture: "summer-20")
     ]
     
+    init(viewModel: FriendPhotoViewModel) {
+        self.viewModel = viewModel
+        self.viewModel.fetchPhotos()
+    }
+    
     let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    let adaptiveColumns = [GridItem(.adaptive(minimum: 80, maximum: 200))]
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: columns) {
+            LazyVGrid(columns: adaptiveColumns) {
                 ForEach(0...19, id: \.self) { value in
-                    VStack{
-                        Image(friendsPhoto[value].picName)
-                            .scaleEffect(2)
-                            .padding(.vertical, 30)
-                            .overlay(alignment: .bottom) {
-                                LikesCounter()
-                            }
-                        
-                    }
-                    
-                        
+                    //Image(viewModel.photos[value].photoSizes.last?.photoURL ?? "")
+                    Image(friendsPhoto[value].picName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .overlay(alignment: .bottom) {
+                            LikesCounter()
+                        }
                 }
             }
         }
     }
 }
 
-struct FriendPhotoView_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendPhotoView()
-    }
-}
+//struct FriendPhotoView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FriendPhotoView()
+//    }
+//}

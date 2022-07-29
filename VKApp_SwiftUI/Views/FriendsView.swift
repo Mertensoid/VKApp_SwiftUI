@@ -19,7 +19,7 @@ struct FriendsView: View {
     
     var body: some View {
         List(viewModel.friends) { friend in
-            NavigationLink(destination: FriendPhotoView()) {
+            NavigationLink(destination: FriendPhotoView(viewModel: FriendPhotoViewModel(currentFriend: friend.friendID))) {
                 UserCell(userName: friend.name, userPicName: friend.friendPhoto)
             }
         }

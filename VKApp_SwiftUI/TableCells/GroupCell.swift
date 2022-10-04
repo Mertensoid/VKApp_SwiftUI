@@ -6,44 +6,39 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct GroupCell: View {
+    
+    var groupName: String = ""
+    var groupPicName: String = ""
+    
     var body: some View {
         VStack {
             ZStack {
                 HStack {
-//                    CellImage {
-//                        Image("essentials-2")
-//                    }
+                    CellImage {
+                        KFImage(URL(string: groupPicName))
+                    }
                     VStack {
                         HStack{
-                            Text("Название группы")
+                            Text(groupName)
                                 .padding(.all, 5)
                             Spacer()
                         }
                         Spacer()
                         HStack{
                             HStack{
-                                Text("Количество участников: ")
-                                    .padding(.leading, 5)
-                                    .padding(.vertical, 5)
-                                    .foregroundColor(Color(red: 0.5, green: 0.5, blue: 0.5, opacity: 0.8))
-                                Text("0")
-                                    .padding(.trailing, 5)
-                                    .padding(.vertical, 5)
-                                    .foregroundColor(Color(red: 0.5, green: 0.5, blue: 0.5, opacity: 0.8))
+                                Text("Дата рождения")
+                                    .padding(.all, 5)
+                                    .foregroundColor(Color(red: 0.5, green: 0.5, blue: 0.5, opacity: 1))
                                 Spacer()
                             }
                         }
                     }
                 }
             }
-            .frame(height: 74, alignment: .top)
-            .padding(.all, 5)
-            .background(Color(red: 0.1, green: 0.5, blue: 1, opacity: 0.1))
-            .cornerRadius(10)
         }
-        .padding(.all, 5)
     }
 }
 

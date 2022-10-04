@@ -10,6 +10,9 @@
 		84DAECA62883F1B100A26385 /* BounceAnimationEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAECA52883F1B100A26385 /* BounceAnimationEffect.swift */; };
 		84DAECA9288403C000A26385 /* LikesCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAECA8288403C000A26385 /* LikesCounter.swift */; };
 		84DAECAE2892C70000A26385 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAECAD2892C70000A26385 /* MainCoordinator.swift */; };
+		84DAECB02893B73100A26385 /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAECAF2893B73100A26385 /* GroupsViewModel.swift */; };
+		84DAECB22893B87C00A26385 /* CurrentGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAECB12893B87C00A26385 /* CurrentGroupView.swift */; };
+		84DAECB4289413DC00A26385 /* FriendPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAECB3289413DC00A26385 /* FriendPhotoViewModel.swift */; };
 		84DC218028608CDD00A3F4EB /* VKApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC217F28608CDD00A3F4EB /* VKApp_SwiftUIApp.swift */; };
 		84DC218228608CDD00A3F4EB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC218128608CDD00A3F4EB /* LoginView.swift */; };
 		84DC218428608CDE00A3F4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DC218328608CDE00A3F4EB /* Assets.xcassets */; };
@@ -49,6 +52,9 @@
 		84DAECA52883F1B100A26385 /* BounceAnimationEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceAnimationEffect.swift; sourceTree = "<group>"; };
 		84DAECA8288403C000A26385 /* LikesCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesCounter.swift; sourceTree = "<group>"; };
 		84DAECAD2892C70000A26385 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		84DAECAF2893B73100A26385 /* GroupsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewModel.swift; sourceTree = "<group>"; };
+		84DAECB12893B87C00A26385 /* CurrentGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGroupView.swift; sourceTree = "<group>"; };
+		84DAECB3289413DC00A26385 /* FriendPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoViewModel.swift; sourceTree = "<group>"; };
 		84DC217C28608CDD00A3F4EB /* VKApp_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApp_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DC217F28608CDD00A3F4EB /* VKApp_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKApp_SwiftUIApp.swift; sourceTree = "<group>"; };
 		84DC218128608CDD00A3F4EB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -176,9 +182,10 @@
 				84DAECAC2892C6B100A26385 /* TabCoordinator */,
 				84DAECA7288403A600A26385 /* myViews */,
 				84DC218128608CDD00A3F4EB /* LoginView.swift */,
-				84DC2214286E268000A3F4EB /* FriendPhotoView.swift */,
 				84DC221C286F3F6600A3F4EB /* FriendsView.swift */,
+				84DC2214286E268000A3F4EB /* FriendPhotoView.swift */,
 				84DC221E286F422400A3F4EB /* GroupsView.swift */,
+				84DAECB12893B87C00A26385 /* CurrentGroupView.swift */,
 				84DC2220286F423700A3F4EB /* NewsView.swift */,
 				84DC2229286F4A1A00A3F4EB /* FriendsHeaderView.swift */,
 				84DC225C2874A72100A3F4EB /* VKLoginWebView.swift */,
@@ -203,6 +210,8 @@
 				84DC221A286E2F1D00A3F4EB /* Friend.swift */,
 				84DC2227286F43F400A3F4EB /* FriendPhoto.swift */,
 				84DC223E28746CA800A3F4EB /* FriendsViewModel.swift */,
+				84DAECB3289413DC00A26385 /* FriendPhotoViewModel.swift */,
+				84DAECAF2893B73100A26385 /* GroupsViewModel.swift */,
 				84DC2243287470E500A3F4EB /* SessionSingleton.swift */,
 			);
 			path = Models;
@@ -329,11 +338,14 @@
 				84DAECAE2892C70000A26385 /* MainCoordinator.swift in Sources */,
 				84DC2218286E26FF00A3F4EB /* ContainerView.swift in Sources */,
 				84DC225D2874A72100A3F4EB /* VKLoginWebView.swift in Sources */,
+				84DAECB4289413DC00A26385 /* FriendPhotoViewModel.swift in Sources */,
 				84DC2209286B5FD900A3F4EB /* UserCell.swift in Sources */,
 				84DC22512874721000A3F4EB /* FriendItems.swift in Sources */,
 				84DC22542874721000A3F4EB /* FriendData.swift in Sources */,
+				84DAECB22893B87C00A26385 /* CurrentGroupView.swift in Sources */,
 				84DC225B2874721000A3F4EB /* GroupData.swift in Sources */,
 				84DC224228746E3C00A3F4EB /* NetworkService.swift in Sources */,
+				84DAECB02893B73100A26385 /* GroupsViewModel.swift in Sources */,
 				84DC2244287470E500A3F4EB /* SessionSingleton.swift in Sources */,
 				84DC222A286F4A1A00A3F4EB /* FriendsHeaderView.swift in Sources */,
 				84DC221B286E2F1D00A3F4EB /* Friend.swift in Sources */,

@@ -56,58 +56,58 @@ class NetworkService {
         getFriendsTask.resume()
     }
     
-//    func fetchPhotos(urlQI: URLQueryItem, completion: @escaping (Result<[PhotoData], Error>) -> Void) {
-//        var photosRequestComponents = requestComponents
-//        photosRequestComponents.path = "/method/photos.getAll"
-//        photosRequestComponents.queryItems?.insert(
-//            urlQI,
-//            at: 0)
-//        guard let url = photosRequestComponents.url else { return }
-//        let getPhotosTask = session.dataTask(with: url) { (data, response, error) in
-//            guard
-//                let _ = response as? HTTPURLResponse,
-//                error == nil,
-//                let data = data
-//            else { return }
-//            do {
-//                let photoResponse = try JSONDecoder().decode(
-//                    VKResponse<PhotoItems>.self,
-//                    from: data)
-//                completion(.success(photoResponse.response.photos))
-//            } catch {
-//                completion(.failure(error))
-//            }
-//        }
-//        getPhotosTask.resume()
-//    }
+    func fetchPhotos(urlQI: URLQueryItem, completion: @escaping (Result<[PhotoData], Error>) -> Void) {
+        var photosRequestComponents = requestComponents
+        photosRequestComponents.path = "/method/photos.getAll"
+        photosRequestComponents.queryItems?.insert(
+            urlQI,
+            at: 0)
+        guard let url = photosRequestComponents.url else { return }
+        let getPhotosTask = session.dataTask(with: url) { (data, response, error) in
+            guard
+                let _ = response as? HTTPURLResponse,
+                error == nil,
+                let data = data
+            else { return }
+            do {
+                let photoResponse = try JSONDecoder().decode(
+                    VKResponse<PhotoItems>.self,
+                    from: data)
+                completion(.success(photoResponse.response.photos))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        getPhotosTask.resume()
+    }
     
-//    func fetchGroups(completion: @escaping (Result<[GroupData], Error>) -> Void) {
-//        var groupsRequestComponents = requestComponents
-//        groupsRequestComponents.path = "/method/groups.get"
-//        groupsRequestComponents.queryItems?.append(
-//            contentsOf: [
-//                URLQueryItem(name: "extended", value: "1"),
-//                URLQueryItem(name: "user_id", value: String(SessionSingleton.instance.userId))
-//            ]
-//        )
-//        guard let url = groupsRequestComponents.url else { return }
-//        let getGroupsTask = session.dataTask(with: url) { (data, response, error) in
-//            guard
-//                let _ = response as? HTTPURLResponse,
-//                error == nil,
-//                let data = data
-//            else { return }
-//            do {
-//                let groupResponse = try JSONDecoder().decode(
-//                    VKResponse<GroupItems>.self,
-//                    from: data)
-//                completion(.success(groupResponse.response.groupData))
-//            } catch {
-//                completion(.failure(error))
-//            }
-//        }
-//        getGroupsTask.resume()
-//    }
+    func fetchGroups(completion: @escaping (Result<[GroupData], Error>) -> Void) {
+        var groupsRequestComponents = requestComponents
+        groupsRequestComponents.path = "/method/groups.get"
+        groupsRequestComponents.queryItems?.append(
+            contentsOf: [
+                URLQueryItem(name: "extended", value: "1"),
+                URLQueryItem(name: "user_id", value: String(SessionSingleton.instance.userId))
+            ]
+        )
+        guard let url = groupsRequestComponents.url else { return }
+        let getGroupsTask = session.dataTask(with: url) { (data, response, error) in
+            guard
+                let _ = response as? HTTPURLResponse,
+                error == nil,
+                let data = data
+            else { return }
+            do {
+                let groupResponse = try JSONDecoder().decode(
+                    VKResponse<GroupItems>.self,
+                    from: data)
+                completion(.success(groupResponse.response.groupData))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        getGroupsTask.resume()
+    }
     
 //    func searchGroups(urlQI: URLQueryItem, completion: @escaping (Result<[GroupData], Error>) -> Void) {
 //        var groupsRequestComponents = requestComponents

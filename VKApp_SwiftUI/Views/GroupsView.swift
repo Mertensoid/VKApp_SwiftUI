@@ -9,18 +9,18 @@ import SwiftUI
 
 struct GroupsView: View {
     
-    @ObservedObject var viewTestModel: FriendsViewModel
+    @ObservedObject var viewTestModel: GroupsViewModel
 
-    init(viewModel: FriendsViewModel) {
+    init(viewModel: GroupsViewModel) {
         self.viewTestModel = viewModel
-        self.viewTestModel.fetchFriends()
+        self.viewTestModel.fetchGroups()
         
     }
     
     var body: some View {
-        List(viewTestModel.friends) { friend in
-            NavigationLink(destination: FriendPhotoView()) {
-                UserCell(userName: friend.name, userPicName: friend.friendPhoto)
+        List(viewTestModel.groups) { group in
+            NavigationLink(destination: CurrentGroupView()) {
+                GroupCell(groupName: group.groupName, groupPicName: group.groupPic)
             }
         }
         .listStyle(.plain)
@@ -32,6 +32,6 @@ struct GroupsView: View {
 
 struct GroupsView_Previews: PreviewProvider {
     static var previews: some View {
-        GroupsView(viewModel: FriendsViewModel())
+        GroupsView(viewModel: GroupsViewModel())
     }
 }

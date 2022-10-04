@@ -37,9 +37,17 @@ struct FriendPhotoView: View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach(0...19, id: \.self) { value in
-                    Image(friendsPhoto[value].picName)
-                        .scaleEffect(2)
-                        .padding(.vertical, 30)
+                    VStack{
+                        Image(friendsPhoto[value].picName)
+                            .scaleEffect(2)
+                            .padding(.vertical, 30)
+                            .overlay(alignment: .bottom) {
+                                LikesCounter()
+                            }
+                        
+                    }
+                    
+                        
                 }
             }
         }

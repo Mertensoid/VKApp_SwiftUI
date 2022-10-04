@@ -13,28 +13,27 @@ struct FriendsView: View {
     
     init(viewModel: FriendsViewModel) {
         self.viewModel = viewModel
+        
     }
     
     var body: some View {
-        
-        List(viewModel.friends) { friend in
-            NavigationLink(destination: FriendPhotoView()) {
-                UserCell(userName: friend.name, userPicName: friend.friendPhoto)
+        NavigationView {
+            List(viewModel.friends) { friend in
+                NavigationLink(destination: FriendPhotoView()) {
+                    UserCell(userName: friend.name, userPicName: friend.friendPhoto)
+                }
             }
-//            Section(header: FriendsHeaderView()) {
-//
-//            }
+            .listStyle(.plain)
+            .navigationBarTitleDisplayMode(.inline)
+            .padding(.all, 0)
+            .navigationTitle("Friends")
+            .onAppear(perform: viewModel.fetchFriends)
         }
-        .onAppear(perform: viewModel.fetchFriends)
-        .listStyle(.plain)
-        .navigationBarTitleDisplayMode(.inline)
-        .padding(.all, 0)
-        .navigationTitle("Friends")
     }
 }
 
-//struct FriendsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FriendsView()
-//    }
-//}
+struct FriendsView_Previews: PreviewProvider {
+    static var previews: some View {
+        FriendsView(viewModel: FriendsViewModel())
+    }
+}

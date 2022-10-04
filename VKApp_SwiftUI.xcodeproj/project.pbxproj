@@ -39,6 +39,7 @@
 		84DC225B2874721000A3F4EB /* GroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC22502874721000A3F4EB /* GroupData.swift */; };
 		84DC225D2874A72100A3F4EB /* VKLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC225C2874A72100A3F4EB /* VKLoginWebView.swift */; };
 		84DC227328774A3700A3F4EB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 84DC227228774A3700A3F4EB /* Kingfisher */; };
+		84DC22762877523700A3F4EB /* StringDecorationPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC22752877523700A3F4EB /* StringDecorationPropertyWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		84DC224F2874721000A3F4EB /* VKResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VKResponse.swift; path = "../../../../GB-iOS-UI/VK_App/VK_App/JSON Mapping/VKResponse.swift"; sourceTree = "<group>"; };
 		84DC22502874721000A3F4EB /* GroupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupData.swift; path = "../../../../GB-iOS-UI/VK_App/VK_App/JSON Mapping/GroupData.swift"; sourceTree = "<group>"; };
 		84DC225C2874A72100A3F4EB /* VKLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginWebView.swift; sourceTree = "<group>"; };
+		84DC22752877523700A3F4EB /* StringDecorationPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringDecorationPropertyWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			children = (
 				84DC220F286B728A00A3F4EB /* CellPictureViewBuilder.swift */,
 				84DC2217286E26FF00A3F4EB /* ContainerView.swift */,
+				84DC22752877523700A3F4EB /* StringDecorationPropertyWrapper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				84DC221F286F422400A3F4EB /* GroupsView.swift in Sources */,
 				84DC225A2874721000A3F4EB /* VKResponse.swift in Sources */,
 				84DC2212286E261E00A3F4EB /* MainView.swift in Sources */,
+				84DC22762877523700A3F4EB /* StringDecorationPropertyWrapper.swift in Sources */,
 				84DC22552874721000A3F4EB /* PhotoResponse.swift in Sources */,
 				84DC218028608CDD00A3F4EB /* VKApp_SwiftUIApp.swift in Sources */,
 				84DC223F28746CA800A3F4EB /* FriendsViewModel.swift in Sources */,

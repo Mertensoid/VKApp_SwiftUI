@@ -8,23 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		84DC218028608CDD00A3F4EB /* VKApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC217F28608CDD00A3F4EB /* VKApp_SwiftUIApp.swift */; };
-		84DC218228608CDD00A3F4EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC218128608CDD00A3F4EB /* ContentView.swift */; };
+		84DC218228608CDD00A3F4EB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC218128608CDD00A3F4EB /* LoginView.swift */; };
 		84DC218428608CDE00A3F4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DC218328608CDE00A3F4EB /* Assets.xcassets */; };
 		84DC218728608CDE00A3F4EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DC218628608CDE00A3F4EB /* Preview Assets.xcassets */; };
 		84DC2209286B5FD900A3F4EB /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC2208286B5FD900A3F4EB /* UserCell.swift */; };
 		84DC220B286B5FE700A3F4EB /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC220A286B5FE700A3F4EB /* GroupCell.swift */; };
 		84DC2210286B728A00A3F4EB /* CellPictureViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC220F286B728A00A3F4EB /* CellPictureViewBuilder.swift */; };
+		84DC2212286E261E00A3F4EB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC2211286E261E00A3F4EB /* MainView.swift */; };
+		84DC2215286E268000A3F4EB /* FriendPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC2214286E268000A3F4EB /* FriendPhotoView.swift */; };
+		84DC2218286E26FF00A3F4EB /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC2217286E26FF00A3F4EB /* ContainerView.swift */; };
+		84DC221B286E2F1D00A3F4EB /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC221A286E2F1D00A3F4EB /* Friend.swift */; };
+		84DC221D286F3F6600A3F4EB /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC221C286F3F6600A3F4EB /* FriendsView.swift */; };
+		84DC221F286F422400A3F4EB /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC221E286F422400A3F4EB /* GroupsView.swift */; };
+		84DC2221286F423700A3F4EB /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC2220286F423700A3F4EB /* NewsView.swift */; };
+		84DC2228286F43F400A3F4EB /* FriendPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC2227286F43F400A3F4EB /* FriendPhoto.swift */; };
+		84DC222A286F4A1A00A3F4EB /* FriendsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC2229286F4A1A00A3F4EB /* FriendsHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84DC217C28608CDD00A3F4EB /* VKApp_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApp_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DC217F28608CDD00A3F4EB /* VKApp_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKApp_SwiftUIApp.swift; sourceTree = "<group>"; };
-		84DC218128608CDD00A3F4EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		84DC218128608CDD00A3F4EB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		84DC218328608CDE00A3F4EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84DC218628608CDE00A3F4EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84DC2208286B5FD900A3F4EB /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		84DC220A286B5FE700A3F4EB /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		84DC220F286B728A00A3F4EB /* CellPictureViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPictureViewBuilder.swift; sourceTree = "<group>"; };
+		84DC2211286E261E00A3F4EB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		84DC2214286E268000A3F4EB /* FriendPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoView.swift; sourceTree = "<group>"; };
+		84DC2217286E26FF00A3F4EB /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		84DC221A286E2F1D00A3F4EB /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		84DC221C286F3F6600A3F4EB /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		84DC221E286F422400A3F4EB /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
+		84DC2220286F423700A3F4EB /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		84DC2227286F43F400A3F4EB /* FriendPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhoto.swift; sourceTree = "<group>"; };
+		84DC2229286F4A1A00A3F4EB /* FriendsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +75,7 @@
 		84DC217E28608CDD00A3F4EB /* VKApp_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				84DC2219286E2EF200A3F4EB /* Models */,
 				84DC220D286B725B00A3F4EB /* Extensions */,
 				84DC220C286B600500A3F4EB /* Views */,
 				84DC2203286B5EFD00A3F4EB /* TableCells */,
@@ -87,7 +106,13 @@
 		84DC220C286B600500A3F4EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				84DC218128608CDD00A3F4EB /* ContentView.swift */,
+				84DC218128608CDD00A3F4EB /* LoginView.swift */,
+				84DC2211286E261E00A3F4EB /* MainView.swift */,
+				84DC2214286E268000A3F4EB /* FriendPhotoView.swift */,
+				84DC221C286F3F6600A3F4EB /* FriendsView.swift */,
+				84DC221E286F422400A3F4EB /* GroupsView.swift */,
+				84DC2220286F423700A3F4EB /* NewsView.swift */,
+				84DC2229286F4A1A00A3F4EB /* FriendsHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -96,8 +121,18 @@
 			isa = PBXGroup;
 			children = (
 				84DC220F286B728A00A3F4EB /* CellPictureViewBuilder.swift */,
+				84DC2217286E26FF00A3F4EB /* ContainerView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84DC2219286E2EF200A3F4EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84DC221A286E2F1D00A3F4EB /* Friend.swift */,
+				84DC2227286F43F400A3F4EB /* FriendPhoto.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +151,8 @@
 			dependencies = (
 			);
 			name = VKApp_SwiftUI;
+			packageProductDependencies = (
+			);
 			productName = VKApp_SwiftUI;
 			productReference = 84DC217C28608CDD00A3F4EB /* VKApp_SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +181,8 @@
 				Base,
 			);
 			mainGroup = 84DC217328608CDD00A3F4EB;
+			packageReferences = (
+			);
 			productRefGroup = 84DC217D28608CDD00A3F4EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -170,10 +209,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84DC218228608CDD00A3F4EB /* ContentView.swift in Sources */,
+				84DC221D286F3F6600A3F4EB /* FriendsView.swift in Sources */,
+				84DC218228608CDD00A3F4EB /* LoginView.swift in Sources */,
+				84DC221F286F422400A3F4EB /* GroupsView.swift in Sources */,
+				84DC2212286E261E00A3F4EB /* MainView.swift in Sources */,
 				84DC218028608CDD00A3F4EB /* VKApp_SwiftUIApp.swift in Sources */,
+				84DC2228286F43F400A3F4EB /* FriendPhoto.swift in Sources */,
 				84DC2210286B728A00A3F4EB /* CellPictureViewBuilder.swift in Sources */,
+				84DC2218286E26FF00A3F4EB /* ContainerView.swift in Sources */,
 				84DC2209286B5FD900A3F4EB /* UserCell.swift in Sources */,
+				84DC222A286F4A1A00A3F4EB /* FriendsHeaderView.swift in Sources */,
+				84DC221B286E2F1D00A3F4EB /* Friend.swift in Sources */,
+				84DC2221286F423700A3F4EB /* NewsView.swift in Sources */,
+				84DC2215286E268000A3F4EB /* FriendPhotoView.swift in Sources */,
 				84DC220B286B5FE700A3F4EB /* GroupCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

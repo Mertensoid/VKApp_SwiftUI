@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct UserCell: View {
+    
+    var userName: String = ""
+    var userPicName: String = ""
+    
     var body: some View {
         VStack {
             ZStack {
                 HStack {
                     CellImage {
-                        Image("farmer_icon_128x128")
+                        Image(userPicName)
                     }
                     VStack {
                         HStack{
-                            Text("Фамилия Имя Отчество")
+                            Text(userName)
                                 .padding(.all, 5)
                             Spacer()
                         }

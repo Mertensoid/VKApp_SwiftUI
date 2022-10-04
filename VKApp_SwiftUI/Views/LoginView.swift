@@ -8,11 +8,26 @@
 import SwiftUI
 import Combine
 
-struct ContentView: View {
+struct LoginView: View {
+    
+    @Binding var isUserLoggedIn: Bool
     
     @State var login: String = ""
     @State var password: String = ""
     @State var shoudShowLogo: Bool = true
+    
+    @State private var showIncorrectCredentialsWarning = false
+    
+    
+    private func verifyLoginData() {
+        if login == "" && password == "" {
+            isUserLoggedIn = true
+            print("Password is OK")
+        } else {
+            showIncorrectCredentialsWarning = true
+        }
+        password = ""
+    }
     
     private let keyboardPublisher = Publishers.Merge(
         NotificationCenter.default.publisher(for:
@@ -46,6 +61,7 @@ struct ContentView: View {
                 .padding(.top)
                 TextField("", text: $login)
                     .cornerRadius(5)
+                    .autocapitalization(.none)
                 HStack {
                     Text("Пароль:")
                         .foregroundColor(.gray)
@@ -57,7 +73,7 @@ struct ContentView: View {
                 
                 HStack {
                     Button {
-                        print("Button Tapped")
+                        verifyLoginData()
                     } label: {
                         Label("Войти", systemImage: "chevron.right.circle")
                             .foregroundColor(.white)
@@ -113,11 +129,15 @@ struct ContentView: View {
         .onTapGesture {
             UIApplication.shared.keyWindow?.endEditing(true)
         }
+        .alert(isPresented: $showIncorrectCredentialsWarning) {
+            Alert(title: Text("Error"), message: Text("Some error"), dismissButton: .cancel())
+        }
         .onReceive(self.keyboardPublisher) { isKeyboardShown in
             withAnimation(.easeIn(duration: 0.5)) {
                 self.shoudShowLogo = !isKeyboardShown
             }
         }
+        
     }
 }
 
@@ -128,8 +148,10 @@ extension UIApplication {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//        LoginView(isUserLoggedIn: )
+//
+//    }
+//}
